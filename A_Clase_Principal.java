@@ -1,24 +1,17 @@
 package a_clase_principal;
-
-import javax.swing.JOptionPane;
 /**
  *
  * @author Kevin Maurico 
  */
 public class A_Clase_Principal {
-    
+    // Crear 2 metodos : Uno que reciba como argumento un numero entero y nos
+    //Permita llenar un arreglo con ese numero recibido en secuencias de 5 
+    // El otro metodo sera para mostrar el arreglo 
     public static void main(String[] args) {
-       // Creacion de un objeto de la clase Datos_Persona
-        Datos_Persona objeto = new Datos_Persona ();
-        String n;  //Declaro una variable tipo String 
         
-        // Utilizo las ventanas emerjentes para capturar el nombre que digite el usuario 
-        n = JOptionPane.showInputDialog("Ingresa el nombre : ");
-          objeto.Ingresa_Nombre(n);
-          
- // Para mostrar el nombre puedo hacerlo con una ventana emergente o un mensaje a pantalla  hay estan los 2 metodos
-        //JOptionPane.showMessageDialog(null,"El nombre es : "+ objeto.Devuelve_Nombre());
-        System.out.println("El nombre es : "+ objeto.Devuelve_Nombre());
+      int vector[] = Datos_Persona.Llenar_Arreglo(20);
+      Datos_Persona.Mostrar_Arreglo(vector);
+             
     }
     
 }

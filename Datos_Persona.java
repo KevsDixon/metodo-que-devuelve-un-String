@@ -4,18 +4,28 @@ package a_clase_principal;
  * @author Kevin Mauricio 
  */
 public class Datos_Persona {
-    // Creacion del atributo de mi clase Datos_Persona
-    String Nombre ="";
-    
-    //Metodo que no retorna ninfun valor y tiene un parametro 
-    public void Ingresa_Nombre(String nom)
-    {   
-     // se le asigna al atributo el parametro del metodo Ingresa_Nombre
-        Nombre=nom;
-    }
-    // Metodo con retorno de un valor tipo String y sin parametros 
-    public String Devuelve_Nombre()
+  
+    public static int[] Llenar_Arreglo(int numero)
     {
-        return Nombre;
+        int arreglo[] = new int[10];
+        
+        for(int i=0; i<arreglo.length; i++)
+        {
+            arreglo[i] = numero;
+            numero = numero+5;
+            
+        }
+        return arreglo;
     }
+    
+    
+    public static void Mostrar_Arreglo(int array[])
+    {
+        System.out.println("Impresion de los datos ");
+        for(int i=0; i<array.length; i++)
+        {
+            System.out.println("Posision ["+i+"] ="+  array[i]);
+        }
+    }
+    
 }
